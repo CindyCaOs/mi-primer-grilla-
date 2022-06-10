@@ -1,0 +1,112 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* primera sección*/
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr minmax(300px, 2fr);
+    border-bottom: 1px solid rgb(250, 233, 250);
+}
+
+.info {
+    align-self: center;
+    font-size: x-large;
+    color: rgb(121, 78, 118);
+}
+
+.title {
+    color: rgb(70, 40, 40);
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    color: rgb(93, 86, 95);
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.image {
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.boton {
+    border: none;
+    border-radius: 20px;
+    color: antiquewhite;
+    background-color: #333;
+    font-weight: 900;
+    padding: 12px 24 px;
+}
+/* segunda sección*/
+
+.title2 {
+    color: rgb(109, 68, 114);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-auto-rows: repeat(2, minmax(150px, 1fr));
+    gap: 50px;
+}
+.dishes-imagen {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dishes-imagen_big {
+    grid-area: 1 / 1 / 3 / 3;
+}
+/* tercera sección*/
+.servicios {
+    margin-bottom: 200px;
+}
+.servicios-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.servicio-grid {
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 200px);
+}
+.servicios-item {
+    background-color: rgb(202, 169, 199);
+    padding: 15px;
+    border-top-left-radius: 40px;
+}
+.servicios-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width: 768px) { 
+   .hero {
+        grid-template-columns: minmax(300px, 500px);
+        justify-content: center;
+    }
+    .image {
+        display: none;
+    }
+    .dishes {    
+    grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
+} 
